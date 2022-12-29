@@ -233,13 +233,15 @@ body {
         left: 0;
     }
     .btnEncriptar {
-        margin: aut;
-        padding: 24px;
+        margin: auto;
+        height: 3em;
+        padding: 0;
         width: 49%;
     }
     .btnDesencriptar {
         margin: auto;
-        padding: 24px;
+        height: 3em;
+        padding: 0;
         width: 49%;
     }
     .resultado {
@@ -331,12 +333,14 @@ body {
     }
     .btnEncriptar {
         margin: 0 0 24px 0;
-        padding: 24px;
+        height: 3em;
+        padding: 0;
         width: 100%;
     }
     .btnDesencriptar {
         margin: 0;
-        padding: 24px;
+        height: 3em;
+        padding: 0;
         width: 100%;
     }
     .resultado {
