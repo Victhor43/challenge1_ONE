@@ -1,0 +1,381 @@
+body {
+    background-color: #E5E5E5;
+}
+
+.logo_head img {
+    width: auto;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.text-convertir {
+    position: absolute;
+    width: auto;
+    left: 240px;
+    top: 168px;
+}
+
+.text-convertir textarea {
+    /* Ingrese el texto aqui */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    resize: none;
+}
+
+.text-convertir input::placeholder {
+    font-weight: bold;
+    color: #0A3871;
+}
+
+.botones {
+    position: absolute;
+    width: 680px;
+    left: 240px;
+    top: 885px;
+}
+
+.btnEncriptar {
+    /* Button */
+    margin-right: 24px;
+    /* Auto layout */
+    padding: 24px;
+    width: 40%;
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    /*text*/
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.btnDesencriptar {
+    box-sizing: border-box;
+    /* Auto layout */
+    padding: 24px;
+    width: 40%;
+    /* Light gray */
+    background: #D8DFE8;
+    /* Dark blue/dark-blue-300 */
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    /*text*/
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 19px;
+    text-align: center;
+    /* Dark blue/dark-blue-300 */
+    color: #0A3871;
+}
+
+.advertencia {
+    position: absolute;
+    top: 851px;
+    left: 240px;
+    width: auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+    text-shadow: 0px 4px 4px black;
+}
+
+.resultado {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 944px;
+    left: 1000px;
+    top: 40px;
+    background: #FFFFFF;
+    /* shadow */
+    box-shadow: 0px 24px 32px -8px rgb(112, 112, 112);
+    border-radius: 32px;
+    text-align: center;
+}
+
+.resultado img {
+    width: auto;
+    height: 304px;
+}
+
+.texto_resultado {
+    width: auto;
+    text-align: center;
+}
+
+.resultado h3 {
+    padding: 0 7%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: #343A40;
+}
+
+.resultado p {
+    padding: 0 3%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #495057;
+}
+
+.cifrado {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+    width: 80%;
+    /* 
+    position: absolute;
+    
+    width: 400px;
+    height: 944px;
+    left: 1000px;
+    top: 40px;
+    word-wrap: break-word;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px; */
+}
+
+.cifrado p {
+    width: 90%;
+    height: 781px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #495057;
+    text-align: left;
+    padding: 0;
+    margin: auto;
+}
+
+.textoCifrado {
+    overflow: auto;
+}
+
+.btnCopiar {
+    box-sizing: border-box;
+    padding: 24px;
+    gap: 8px;
+    position: relative;
+    top: 18px;
+    width: 100%;
+    height: 67px;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+    background-color: transparent;
+}
+
+@media screen and (max-width: 768px) and (min-width: 376px) {
+    .text-convertir {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        left: 0;
+        top: 240px;
+    }
+    .text-convertir textarea {
+        width: 90%;
+    }
+    .advertencia {
+        top: 848px;
+        left: 50px;
+        width: auto;
+    }
+    .controladores_encriptado {
+        position: absolute;
+        width: 100vw;
+        top: 870px;
+    }
+    .botones {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        width: 90%;
+        top: 0;
+        left: 0;
+    }
+    .btnEncriptar {
+        margin: aut;
+        padding: 24px;
+        width: 49%;
+    }
+    .btnDesencriptar {
+        margin: auto;
+        padding: 24px;
+        width: 49%;
+    }
+    .resultado {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 90%;
+        top: 900px;
+        left: auto;
+        height: auto;
+    }
+    .texto_resultado {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 80vw;
+        margin: auto;
+        height: auto;
+    }
+    .resultado img {
+        display: none;
+    }
+    .resultado h3 {
+        width: 100%;
+        margin: 32px auto 16px auto;
+        padding: 0;
+        color: #343A40;
+    }
+    .resultado p {
+        width: 90%;
+        margin-bottom: 15px;
+        height: auto;
+        padding-top: 15px;
+    }
+    .btnCopiar {
+        height: 67px;
+        top: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    * {
+        box-sizing: border-box;
+    }
+    .logo_head img {
+        width: auto;
+        position: absolute;
+        margin: 0;
+        top: 10px;
+        left: 0px;
+    }
+    .text-convertir {
+        position: absolute;
+        text-align: center;
+        width: 100vw;
+        height: 50px;
+        top: 152px;
+        left: 0;
+    }
+    .text-convertir textarea {
+        width: 90%;
+        height: 300px;
+    }
+    .advertencia {
+        top: 451px;
+        left: 30px;
+        width: auto;
+    }
+    .controladores_encriptado {
+        position: relative;
+        width: 100vw;
+        top: 485px;
+    }
+    .botones {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        width: 90%;
+        top: 0;
+        left: 0;
+    }
+    .btnEncriptar {
+        margin: 0 0 24px 0;
+        padding: 24px;
+        width: 100%;
+    }
+    .btnDesencriptar {
+        margin: 0;
+        padding: 24px;
+        width: 100%;
+    }
+    .resultado {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 60px auto;
+        width: 90%;
+        top: 485px;
+        left: auto;
+        height: auto;
+    }
+    .texto_resultado {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        height: auto;
+    }
+    .resultado img {
+        display: none;
+    }
+    .resultado h3 {
+        width: 90%;
+        margin: 32px auto 16px auto;
+        padding: 0;
+        color: #343A40;
+    }
+    .resultado p {
+        width: 90%;
+        margin-bottom: 15px;
+        height: auto;
+    }
+    .btnCopiar {
+        height: 67px;
+        top: 0;
+        margin-bottom: 10px;
+    }
+}

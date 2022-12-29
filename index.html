@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encriptador Alura</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <script>
+            function encriptar() {
+
+
+                /* COMUNICADOR ENTRE HTML E INPUT */
+                const textoOriginal = document.querySelector("#texto-convertir");
+                let textoConvertir = textoOriginal.value;
+
+                if (textoConvertir == "" || textoConvertir == null) {
+                    document.querySelector(".sin_dato").style.display = 'inline';
+                    document.querySelector(".cifrado").style.display = 'none';
+                } else {
+
+                    document.querySelector(".sin_dato").style.display = 'none';
+                    document.querySelector(".cifrado").style.display = "inline";
+
+                    textoConvertir = textoConvertir.replaceAll("e", "entre");
+
+                    textoConvertir = textoConvertir.replaceAll("i", "imes");
+
+                    textoConvertir = textoConvertir.replaceAll("a", "ai");
+
+                    textoConvertir = textoConvertir.replaceAll("o", "ober");
+
+                    textoConvertir = textoConvertir.replaceAll("u", "ufat");
+
+                    document.querySelector(".cifrado p").textContent = textoConvertir;
+                    document.querySelector("#texto-convertir").value = "";
+                    console.log(textoConvertir);
+
+                }
+
+                document.querySelector("#texto-convertir").focus();
+
+
+            }
+
+            function desencriptar() {
+                const textoOriginal = document.querySelector("#texto-convertir");
+                let textoConvertir = textoOriginal.value;
+                /* COMUNICADOR ENTRE HTML E INPUT */
+                if (textoConvertir == "" || textoConvertir == null) {
+                    document.querySelector(".sin_dato").style.display = 'inline';
+                    document.querySelector(".cifrado").style.display = 'none';
+                } else {
+                    document.querySelector(".sin_dato").style.display = 'none';
+
+                    document.querySelector(".cifrado").style.display = "flex";
+                    textoConvertir = textoConvertir.replaceAll("enter", "e");
+
+                    textoConvertir = textoConvertir.replaceAll("imes", "i");
+
+                    textoConvertir = textoConvertir.replaceAll("ai", "a");
+
+                    textoConvertir = textoConvertir.replaceAll("ober", "o");
+
+                    textoConvertir = textoConvertir.replaceAll("ufat", "u");
+
+                    document.querySelector(".cifrado p").textContent = textoConvertir;
+                    document.querySelector("#texto-convertir").value = "";
+                }
+                document.querySelector("#texto-convertir").focus();
+
+            }
+
+            function copiar() {
+                /* VERIFICO SI TIENE PERMISOS */
+
+                navigator.permissions.query({
+                    name: "clipboard-write"
+                }).then((result) => {
+                    if (result.state === "granted" || result.state === "prompt") {
+                        /* write to the clipboard now */
+                        const texto = document.querySelector(".cifrado p").textContent;
+                        navigator.clipboard.writeText(texto);
+
+                        console.log(texto);
+                    }
+                });
+                document.querySelector("#texto-convertir").focus();
+            }
+        </script>
+
+        <div class="logo_head">
+            <img src="img/Logo.svg" alt="logo_aluras">
+        </div>
+
+        <div class="text-convertir">
+            <textarea name="" id="texto-convertir" cols="30" rows="10" placeholder="Ingrese aqui su texto"></textarea>
+        </div>
+
+        <section class="controladores_encriptado">
+            <div class="botones">
+                <input onclick="encriptar()" class="btnEncriptar" type="submit" id="encriptar" value="Encriptar">
+                <input onclick="desencriptar()" class="btnDesencriptar" type="submit" id="desencriptar" value="Desencriptar">
+            </div>
+        </section>
+
+        <div class="advertencia">
+            <p><img src="img/bi_exclamation-circle-fill.png" alt="exclamacion"> Solo letras minusculos y sin acentos</p>
+        </div>
+
+        <section class="resultado">
+            <div class="sin_dato">
+                <img src="img/Muñeco.svg">
+                <div class="texto_resultado">
+                    <h3>Ningun mensaje fue encontrado</h3>
+                    <p>Ingrese el texto que desee encriptar o desencriptar</p>
+                </div>
+            </div>
+
+            <div class="cifrado">
+                <p class="textoCifrado">este es el texto cifrado</p>
+                <input onclick="copiar()" class="btnCopiar" id="copiar" type="submit" value="Copiar">
+            </div>
+
+        </section>
+
+
+    </main>
+    <footer></footer>
+
+</body>
+
+</html>
